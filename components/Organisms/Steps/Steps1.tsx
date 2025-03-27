@@ -1,5 +1,6 @@
 import Button from "@/components/Atoms/Buttons/Button";
 import Input from "@/components/Atoms/Input/Input";
+import FloatingInput from "@/components/Molecules/FloatingInput/FloatingInput";
 import SectionHeader from "@/components/Molecules/SectionHeader/SectionHeader";
 import React from "react";
 
@@ -14,7 +15,8 @@ const Steps1 = () => {
           gap: "24px",
         },
       }}
-      title="Paso 1/4 - Datos de tu compra"
+      spam="Paso 1/4 - "
+      title="Datos de tu compra"
       paragraph="Dejanos el DNI que usaste en tu compra y el punto de venta donde la realizaste. Con estos datos vamos a buscar tus pedidos y ayudarte a gestionar tu solicitud."
       titleStyles={{
         color: "lead",
@@ -41,14 +43,32 @@ const Steps1 = () => {
           letterSpacing: "-0.48px",
         },
       }}
+      spamStyles={{
+        color: "madForMango",
+      }}
     >
-      <Input
+      <FloatingInput
+        label="DNI"
+        labelRequired="*"
+        labelRequiredColor="brilliantLiquorice"
+        input={{
+          borderColorFocused: "madForMango",
+          placeholder: " ",
+          required: true,
+          colorLabel: "madForMango",
+        }}
+        labelColor="brilliantLiquorice"
+        labelBackgroundColor="white"
+        //  required="Ingresá tu dni sin puntos ni espacios"
+      />
+      {/* <Input
         type="text"
         placeholder="DNI"
         name="dni"
         width="100%"
         height="48px"
-      />{" "}
+        borderColorFocused="madForMango"
+      />{" "} */}
       {/* Esto va a hacer un modulo dinamico, solo estoy haciendo una prueba */}
       <Button
         backgroundColor="lead"

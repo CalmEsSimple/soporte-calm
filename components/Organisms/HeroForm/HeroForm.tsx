@@ -9,7 +9,7 @@ const HeroForm = () => {
   return (
     <ContainerHero $flexDirection="column">
       <Images
-        src="https://s3-alpha-sig.figma.com/img/79dc/84f7/b2c51e99b7fc48fb51c2201b5874f965?Expires=1743984000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=DjOdCeMTGd9d2T3f1tedwBOgTLMYkUSA3kCA3VujXRnMn6Zn4TjqOGYALCoKMAW-aLGd9-cu1iOni1rRDAp5RZea2haFXWttoVGDpSND1fFIqLAE8c8l8NTiH5vo0lRjEXPbR-KxD-HCe6lq9bI-DkPnKBCbvy~xphPhcWsQ7moucYHmI8C~8dJMD8nw7XLVbjz4ZbkW2mYG-KJ3kwx-qGjeqcxgRyl8E8XFrhldXzkdxu0KkCkAhxgToT-9ifoEyESDznKu9vHp6aGGzsI1M3oeLidaxA7kyfsZ0~T-PELmvqAwFvULqi8N5jxWknEjbLxlnKTFi2awGlx7KINbyw__"
+        src="https://imagedelivery.net/7yveHullsFjmXtPLdJPFsg/f5f47804-787a-4b3e-9132-8ff21ada0600/fit=cover"
         alt="logo"
         height="404px"
         objectFit="cover"

@@ -6,15 +6,22 @@ import { SectionHeaderStyles } from "./styled";
 
 const SectionHeader = ({
   title,
+  spam,
   paragraph,
   titleStyles,
+  spamStyles,
   paragraphStyles,
   children,
   sectionHeaderStyles,
 }: SectionHeaderProps) => {
   return (
     <SectionHeaderStyles {...sectionHeaderStyles}>
-      <Titles {...titleStyles}>{title}</Titles>
+      <Titles {...titleStyles}>
+        <Paragraph textTag="span" {...spamStyles}>
+          {spam}
+        </Paragraph>
+        {title}
+      </Titles>
       <Paragraph {...paragraphStyles}>
         {paragraph.split("\n").map((line, index) => (
           <React.Fragment key={index}>
