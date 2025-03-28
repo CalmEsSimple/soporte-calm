@@ -1,8 +1,8 @@
-import { theme } from "@/utils/Theme"
+import { theme } from "@/utils/Theme";
 import { ReactElement } from "react";
 
-type ThemeColors = keyof typeof theme.colors
-type Fonts = keyof typeof theme.fonts
+type ThemeColors = keyof typeof theme.colors;
+type Fonts = keyof typeof theme.fonts;
 
 type responsiveMobile = {
   align?: string;
@@ -11,7 +11,8 @@ type responsiveMobile = {
   color?: ThemeColors;
   lineHeight?: string;
   width?: string;
-}
+  letterSpacing?: string;
+};
 
 export type TypographyProps = {
   textTag?: "p" | "span" | "strong" | "em" | "a" | "b";
@@ -19,7 +20,7 @@ export type TypographyProps = {
   font?: Fonts;
   fontSize?: string;
   color?: ThemeColors;
-  children: React.ReactNode;
+  children?: React.ReactNode;
   align?: string;
   textDecoration?: string;
   link?: string;
@@ -29,33 +30,32 @@ export type TypographyProps = {
   boldTitle?: string | ReactElement;
   textShadow?: string;
   textStroke?: string;
-  letterSpacing?: string
-  hasStrong?: boolean
-  hasLink?: boolean
-  HoverColor?: ThemeColors
-  target?: string
-  rel?: string
+  letterSpacing?: string;
+  hasStrong?: boolean;
+  hasLink?: boolean;
+  HoverColor?: ThemeColors;
+  target?: string;
+  rel?: string;
   fontWeight?: number;
   handleClick?: () => void;
-  isNextLink?: boolean
-  arialLabel?: string
+  isNextLink?: boolean;
+  arialLabel?: string;
 };
 
 export type TypographyStyledProps = {
-  $font?: Fonts
-  $fontSize?: string
-  $color?: ThemeColors
-  $align?: string
-  $textDecoration?: string
-  $width?: number
+  $font?: Fonts;
+  $fontSize?: string;
+  $color?: ThemeColors;
+  $align?: string;
+  $textDecoration?: string;
+  $width?: number;
   $textShadow?: string;
-  $responsiveMobile?: responsiveMobile
-  $lineHeight?: string
-  $letterSpacing?: string
+  $responsiveMobile?: responsiveMobile;
+  $lineHeight?: string;
+  $letterSpacing?: string;
   $textStroke?: string;
-  $hasStrong?: boolean
-  $hasLink?: boolean
-  $HoverColor?: ThemeColors
+  $hasStrong?: boolean;
+  $hasLink?: boolean;
+  $HoverColor?: ThemeColors;
   $fontWeight?: number;
 };
-
