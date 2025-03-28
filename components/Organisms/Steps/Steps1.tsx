@@ -61,14 +61,6 @@ const Steps1 = () => {
         labelBackgroundColor="white"
         //  required="Ingresá tu dni sin puntos ni espacios"
       />
-      {/* <Input
-        type="text"
-        placeholder="DNI"
-        name="dni"
-        width="100%"
-        height="48px"
-        borderColorFocused="madForMango"
-      />{" "} */}
       {/* Esto va a hacer un modulo dinamico, solo estoy haciendo una prueba */}
       <Button
         backgroundColor="lead"

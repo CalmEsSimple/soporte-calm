@@ -12,7 +12,6 @@ export type FloatingInputProps = {
   input?: InputProps;
   error?: string;
   required?: string;
-  focused?: boolean;
 };
 
 export type LabelStyledProps = {

@@ -3,7 +3,6 @@ import { InputWrapper, Label } from "./styled";
 import { FloatingInputProps } from "./types";
 import Paragraph from "@/components/Atoms/Typography/Text";
 import { useState } from "react";
-import { set } from "date-fns";
 
 const FloatingInput = ({
   label,
@@ -14,12 +13,15 @@ const FloatingInput = ({
   input,
   error,
   required,
-  focused,
 }: FloatingInputProps) => {
   const [isFocus, setIsFocus] = useState(false);
   return (
     <InputWrapper>
-      <Input {...input} onFocus={() => setIsFocus(true)} />
+      <Input
+        {...input}
+        onFocus={() => setIsFocus(true)}
+        onBlur={() => setIsFocus(false)}
+      />
       <Label $color={labelColor} $backgroundColor={labelBackgroundColor}>
         {label}
         <Paragraph
@@ -29,8 +31,8 @@ const FloatingInput = ({
           {labelRequired}
         </Paragraph>
       </Label>
-      {/* {input?.required && <span>{required}</span>}
-      {input?.error && <span>{error}</span>} */}
+      {input?.required && <span>{required}</span>}
+      {input?.error && <span>{error}</span>}
     </InputWrapper>
   );
 };
